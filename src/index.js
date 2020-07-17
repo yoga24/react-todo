@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import TodoTaker from "./TodoTaker";
+import Todos from "./Todos";
+import "./index.css";
+
+const defTodos = [
+  { id: 1, text: "takeNote", complete: false },
+  { id: 2, text: "design diagrams", complete: false },
+  { id: 3, text: "Mockups done ?", complete: true },
+];
+
+function Todo() {
+  const [todos, setTodos] = React.useState(defTodos);
+
+  return (
+    <div className="container">
+      <TodoTaker setTodos={setTodos} />
+      <Todos todos={todos} setTodos={setTodos} />
+    </div>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Todo />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

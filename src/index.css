@@ -1,13 +1,109 @@
-body {
+/* body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background-color: rgb(76, 174, 174, 0.5);
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(76, 174, 174, 0.75);
+}
+
+.flex {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+/*TodoTaker*/
+
+form {
+  max-width: 800px;
+  margin: 20px auto;
+  height: 50px;
+}
+
+form input {
+  flex: 4;
+  padding: 2px;
+  border: 3px solid #e66f6f;
+  font-size: 20px;
+}
+
+form button {
+  flex: 1;
+
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+
+  background-color: #e66f6f;
+
+  font-size: 30px;
+  font-weight: 700;
+  color: #693232;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e26161;
+  box-shadow: 0px 0px 3px #da4141;
+}
+
+/* TODO LIST */
+li {
+  list-style-type: none;
+}
+
+.todo {
+  font-size: 20px;
+  border-bottom: 2px solid #282882;
+  align-items: center;
+}
+
+.todo * {
+  margin: 3px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.complete {
+  text-decoration: line-through;
+  font-style: italic;
 }
